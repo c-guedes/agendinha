@@ -43,4 +43,4 @@ class Agenda(models.Model):
     donoAgenda = models.ForeignKey(Pessoa, on_delete=models.CASCADE, blank=True, null = True)
     compromisso = models.ManyToManyField(Compromisso)
     agendaInstitucional = models.ForeignKey(AgendaInstitucional, on_delete=models.CASCADE, blank=True, null = True)
-    privada = models.BooleanField("Agenda Privada", blank=True, null = True)
+    privada = models.BooleanField("Agenda Pública?", blank=True, null = True)
