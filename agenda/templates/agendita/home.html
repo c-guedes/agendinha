@@ -1,0 +1,13 @@
+<h1>Agenditas</h1>
+{% for agenda in object_list %}
+    {% if agenda.privada == False%}
+    <div>
+        <h2>Dono da Agenda -> {{ agenda.donoAgenda }}</h2>
+        <p>Ano da Agenda Institucional - > {{ agenda.agendaInstitucional | linebreaksbr}}</p>
+        <p>Compromissos: {{ agenda.compromisso.all|join:", "}}</p>
+        <p>Agenda Pública? - > {{ agenda.privada}}</p>
+        <hr>
+        <br>
+    </div>
+    {% endif %}
+{% endfor %}
